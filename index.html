@@ -2,91 +2,101 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="theme-color" content="#0f172a">
-<title>Cold Call List — 2026-06-23</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>📞 Today's Calls — Fri Jun 26</title>
 <style>
-*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
-body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;background:#0f172a;color:#e2e8f0;padding-bottom:90px}
-header{position:sticky;top:0;background:#0f172a;padding:14px 16px 10px;border-bottom:1px solid #1e293b;z-index:10}
-h1{margin:0 0 2px;font-size:18px;font-weight:700}
-.sub{font-size:12px;color:#64748b}
-.bar{height:8px;background:#1e293b;border-radius:99px;margin-top:10px;overflow:hidden}
-.fill{height:100%;background:linear-gradient(90deg,#22c55e,#16a34a);width:0%;transition:width .3s}
-.filters{display:flex;gap:6px;margin-top:10px;overflow-x:auto;padding-bottom:2px}
-.chip{flex:0 0 auto;padding:6px 12px;border-radius:99px;background:#1e293b;color:#94a3b8;font-size:13px;font-weight:600;border:none}
-.chip.on{background:#3b82f6;color:#fff}
-.list{padding:12px 14px}
-.card{background:#1e293b;border-radius:14px;padding:14px;margin-bottom:12px;border:1px solid #334155;transition:opacity .2s}
-.card.done{opacity:.38}
-.card.done .biz{text-decoration:line-through}
-.ntag{display:inline-block;font-size:10px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;padding:3px 8px;border-radius:6px;margin-bottom:8px}
-.Renovations{background:#7c3aed33;color:#c4b5fd}
-.Electrician{background:#ca8a0433;color:#fde68a}
-.HVAC{background:#dc262633;color:#fca5a5}
-.Plumber{background:#0891b233;color:#67e8f9}
-.biz{font-size:17px;font-weight:700;margin:0 0 3px}
-.loc{font-size:13px;color:#94a3b8;margin-bottom:8px}
-.fact{font-size:13px;color:#cbd5e1;background:#0f172a;padding:8px 10px;border-radius:8px;margin-bottom:12px;border-left:3px solid #3b82f6}
-.actions{display:flex;gap:8px}
-.btn{flex:1;text-align:center;padding:13px;border-radius:10px;font-size:15px;font-weight:700;border:none;text-decoration:none;display:block}
-.call{background:#22c55e;color:#04240f}
-.mark{background:#334155;color:#e2e8f0}
-.mark.on{background:#16a34a;color:#fff}
-.empty{text-align:center;color:#64748b;padding:50px 20px;font-size:14px}
-.reset{position:fixed;bottom:0;left:0;right:0;background:#0f172a;border-top:1px solid #1e293b;padding:12px 16px;text-align:center}
-.reset button{background:none;border:1px solid #334155;color:#64748b;padding:8px 16px;border-radius:8px;font-size:13px}
+  :root{--bg:#0d1117;--card:#161b22;--line:#30363d;--txt:#e6edf3;--mut:#8b949e;
+        --hot:#f85149;--money:#d29922;--warm:#3fb950;--first:#a371f7;--call:#238636;--done:#1f6feb}
+  *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+  body{margin:0;background:var(--bg);color:var(--txt);font:16px/1.4 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;padding:0 0 40px}
+  header{position:sticky;top:0;background:rgba(13,17,23,.95);backdrop-filter:blur(8px);
+         padding:14px 16px calc(10px + env(safe-area-inset-top)) 16px;border-bottom:1px solid var(--line);z-index:5}
+  h1{margin:0 0 8px;font-size:19px}
+  .bar{height:8px;background:var(--card);border-radius:6px;overflow:hidden}
+  .bar>i{display:block;height:100%;width:0;background:var(--warm);transition:width .25s}
+  .count{font-size:13px;color:var(--mut);margin-top:6px;display:flex;justify-content:space-between}
+  .reset{color:var(--mut);background:none;border:1px solid var(--line);border-radius:6px;padding:3px 9px;font-size:12px}
+  .sec{font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:var(--mut);margin:22px 16px 8px;font-weight:700}
+  .card{background:var(--card);border:1px solid var(--line);border-left-width:4px;border-radius:12px;margin:10px 14px;padding:14px}
+  .card.hot{border-left-color:var(--hot)} .card.money{border-left-color:var(--money)}
+  .card.warm{border-left-color:var(--warm)} .card.first{border-left-color:var(--first)}
+  .card.done{opacity:.45}
+  .tag{display:inline-block;font-size:11px;padding:2px 8px;border-radius:20px;background:#21262d;color:var(--mut);margin-bottom:6px}
+  .name{font-size:18px;font-weight:700;margin:2px 0}
+  .what{font-size:14px;color:var(--mut);margin:4px 0 12px}
+  .ph{font-variant-numeric:tabular-nums;color:var(--txt);font-size:14px}
+  .row{display:flex;gap:10px;margin-top:10px}
+  a.call,button.mark{flex:1;text-align:center;border:none;border-radius:10px;padding:13px 0;font-size:15px;font-weight:700;text-decoration:none}
+  a.call{background:var(--call);color:#fff}
+  button.mark{background:#21262d;color:var(--txt);border:1px solid var(--line)}
+  .card.done button.mark{background:var(--done);color:#fff;border-color:var(--done)}
+  footer{text-align:center;color:var(--mut);font-size:12px;margin-top:26px}
 </style>
 </head>
 <body>
 <header>
-  <h1>📞 Cold Call List</h1>
-  <div class="sub" id="counter"></div>
-  <div class="bar"><div class="fill" id="fill"></div></div>
-  <div class="filters" id="filters"></div>
+  <h1>📞 Today's Calls — Fri Jun 26</h1>
+  <div class="bar"><i id="fill"></i></div>
+  <div class="count"><span id="cnt">0 / 0 done</span><button class="reset" onclick="resetAll()">reset</button></div>
 </header>
-<div class="list" id="list"></div>
-<div class="reset"><button onclick="resetAll()">Reset all progress</button></div>
+<main id="list"></main>
+<footer>Tap Call to dial · Mark done as you go · saves on your phone</footer>
 <script>
-const LEADS = [{"biz": "Werner Facility Services", "loc": "Woodstock", "phone": "519-532-1807", "fact": "39 Google reviews, no website", "niche": "Renovations", "rev": 39}, {"biz": "Respectable Roofers", "loc": "Grimsby", "phone": "905-616-7464", "fact": "21 Google reviews, no website", "niche": "Renovations", "rev": 21}, {"biz": "Skyview Home Renovations", "loc": "Kitchener", "phone": "226-600-9337", "fact": "21 Google reviews, no website", "niche": "Renovations", "rev": 21}, {"biz": "RM General Contractor Inc", "loc": "North York", "phone": "647-865-8009", "fact": "16 Google reviews, no website", "niche": "Renovations", "rev": 16}, {"biz": "DO-RIGHT RENOVATIONS", "loc": "Brantford", "phone": "226-966-4748", "fact": "13 Google reviews, no website", "niche": "Renovations", "rev": 13}, {"biz": "Wilson\u2019s Driveway Sealing", "loc": "Belleville", "phone": "613-847-7144", "fact": "10 Google reviews, no website", "niche": "Renovations", "rev": 10}, {"biz": "FXB Building Solutions", "loc": "Fenwick", "phone": "905-518-3551", "fact": "10 Google reviews, no website", "niche": "Renovations", "rev": 10}, {"biz": "DeHaan Homes Inc", "loc": "Fonthill", "phone": "905-892-6518", "fact": "9 Google reviews, no website", "niche": "Renovations", "rev": 9}, {"biz": "Welland Remodeling & Construction", "loc": "Welland", "phone": "289-768-8937", "fact": "8 Google reviews, no website", "niche": "Renovations", "rev": 8}, {"biz": "ARCONSA Design & Construction Inc.", "loc": "Niagara Falls", "phone": "437-500-6556", "fact": "8 Google reviews, no website", "niche": "Renovations", "rev": 8}, {"biz": "Narwal renovations", "loc": "Welland", "phone": "416-831-5182", "fact": "8 Google reviews, no website", "niche": "Renovations", "rev": 8}, {"biz": "Legends Building Group", "loc": "Fonthill", "phone": "905-892-3333", "fact": "7 Google reviews, no website", "niche": "Renovations", "rev": 7}, {"biz": "Grimsby Utility Contruction Inc", "loc": "Grimsby", "phone": "905-945-8878", "fact": "7 Google reviews, no website", "niche": "Renovations", "rev": 7}, {"biz": "Timmers Drywall", "loc": "Vineland", "phone": "905-246-7310", "fact": "7 Google reviews, no website", "niche": "Renovations", "rev": 7}, {"biz": "APF Construction", "loc": "Algoma, Unorganized, North Pa*", "phone": "705-971-4251", "fact": "7 Google reviews, no website", "niche": "Renovations", "rev": 7}, {"biz": "Pilon Concrete Inc.", "loc": "Fonthill", "phone": "905-321-8619", "fact": "6 Google reviews, no website", "niche": "Renovations", "rev": 6}, {"biz": "ASB Inc. Construction", "loc": "Woodstock", "phone": "519-424-3348", "fact": "5 Google reviews, no website", "niche": "Renovations", "rev": 5}, {"biz": "Bakley Inc.", "loc": "Waterdown", "phone": "905-599-2447", "fact": "5 Google reviews, no website", "niche": "Renovations", "rev": 5}, {"biz": "Mississauga Remodeling & Construction", "loc": "Mississauga", "phone": "289-274-8179", "fact": "5 Google reviews, no website", "niche": "Renovations", "rev": 5}, {"biz": "G A Himburg Concrete", "loc": "Brantford", "phone": "519-752-1641", "fact": "4 Google reviews, no website", "niche": "Renovations", "rev": 4}, {"biz": "H S Cole Contracting & Excavtg", "loc": "Fenwick", "phone": "905-562-1978", "fact": "4 Google reviews, no website", "niche": "Renovations", "rev": 4}, {"biz": "Brooks Masonry", "loc": "Belleville", "phone": "613-922-1168", "fact": "4 Google reviews, no website", "niche": "Renovations", "rev": 4}, {"biz": "EAVESTROUGH SERVICES", "loc": "Brockville", "phone": "613-342-5663", "fact": "4 Google reviews, no website", "niche": "Renovations", "rev": 4}, {"biz": "Da Costa Drywall", "loc": "Fort Erie", "phone": "905-871-3051", "fact": "3 Google reviews, no website", "niche": "Renovations", "rev": 3}, {"biz": "Brighton Construction", "loc": "Woodstock", "phone": "519-539-6821", "fact": "3 Google reviews, no website", "niche": "Renovations", "rev": 3}, {"biz": "BELLAH CONSTRUCTION INC", "loc": "Niagara Falls", "phone": "226-333-4070", "fact": "3 Google reviews, no website", "niche": "Renovations", "rev": 3}, {"biz": "Holden contracting and renovations inc", "loc": "Cambridge", "phone": "519-591-7400", "fact": "3 Google reviews, no website", "niche": "Renovations", "rev": 3}, {"biz": "G R Construction", "loc": "Bracebridge", "phone": "705-646-3676", "fact": "3 Google reviews, no website", "niche": "Renovations", "rev": 3}, {"biz": "Anderson Contracting", "loc": "Bracebridge", "phone": "705-644-4447", "fact": "3 Google reviews, no website", "niche": "Renovations", "rev": 3}, {"biz": "Falco Construction", "loc": "Tillsonburg", "phone": "519-688-7663", "fact": "3 Google reviews, no website", "niche": "Renovations", "rev": 3}, {"biz": "Karl Reyneveld Construction", "loc": "Woodstock", "phone": "519-467-5552", "fact": "2 Google reviews, no website", "niche": "Renovations", "rev": 2}, {"biz": "Rosehaven Homes", "loc": "Waterdown", "phone": "905-690-7629", "fact": "2 Google reviews, no website", "niche": "Renovations", "rev": 2}, {"biz": "Giuts Energy LLC", "loc": "Brockville", "phone": "705-230-2929", "fact": "2 Google reviews, no website", "niche": "Renovations", "rev": 2}, {"biz": "Kings Contracting Inc.", "loc": "Stoney Creek", "phone": "905-923-0490", "fact": "2 Google reviews, no website", "niche": "Renovations", "rev": 2}, {"biz": "Big Tech Renovations", "loc": "Belleville", "phone": "416-838-5605", "fact": "2 Google reviews, no website", "niche": "Renovations", "rev": 2}, {"biz": "Piemonte General Contractors", "loc": "Sault Ste. Marie", "phone": "705-779-3320", "fact": "2 Google reviews, no website", "niche": "Renovations", "rev": 2}, {"biz": "General Contracting Ltd", "loc": "Sault Ste. Marie", "phone": "705-759-4410", "fact": "2 Google reviews, no website", "niche": "Renovations", "rev": 2}, {"biz": "BDB Home Building and Renovations", "loc": "Sault Ste. Marie", "phone": "705-255-8185", "fact": "2 Google reviews, no website", "niche": "Renovations", "rev": 2}, {"biz": "Luxcor Concrete Pumping", "loc": "Tillsonburg", "phone": "519-550-4687", "fact": "2 Google reviews, no website", "niche": "Renovations", "rev": 2}, {"biz": "BKS concrete Ltd.", "loc": "Sault Ste. Marie", "phone": "437-995-6266", "fact": "2 Google reviews, no website", "niche": "Renovations", "rev": 2}, {"biz": "Sturgeon Building Company LTD.", "loc": "Bracebridge", "phone": "705-706-2108", "fact": "2 Google reviews, no website", "niche": "Renovations", "rev": 2}, {"biz": "BauCon Canada", "loc": "Fort Erie", "phone": "289-876-8999", "fact": "1 Google review, no website", "niche": "Renovations", "rev": 1}, {"biz": "Ebersole Excavating", "loc": "Stevensville", "phone": "905-382-3913", "fact": "1 Google review, no website", "niche": "Renovations", "rev": 1}, {"biz": "JQ Masonry & interlock", "loc": "Toronto", "phone": "437-339-9799", "fact": "1 Google review, no website", "niche": "Renovations", "rev": 1}, {"biz": "Sam Boutine's Home Improvement", "loc": "Waterdown", "phone": "905-690-0676", "fact": "1 Google review, no website", "niche": "Renovations", "rev": 1}, {"biz": "Brant Reno Tech", "loc": "Brantford", "phone": "905-971-3349", "fact": "1 Google review, no website", "niche": "Renovations", "rev": 1}, {"biz": "Lockwood Construction", "loc": "Welland", "phone": "289-213-2922", "fact": "1 Google review, no website", "niche": "Renovations", "rev": 1}, {"biz": "Iris Renovations", "loc": "Niagara Falls", "phone": "905-414-7878", "fact": "1 Google review, no website", "niche": "Renovations", "rev": 1}, {"biz": "All Around Building Group LTD.", "loc": "Fort Erie", "phone": "289-501-5182", "fact": "1 Google review, no website", "niche": "Renovations", "rev": 1}, {"biz": "G A Bruce Construction Svc Ltd", "loc": "Brockville", "phone": "613-342-6942", "fact": "1 Google review, no website", "niche": "Renovations", "rev": 1}, {"biz": "general contracting", "loc": "Toronto", "phone": "416-605-9004", "fact": "1 Google review, no website", "niche": "Renovations", "rev": 1}, {"biz": "A & F Home Improvements Inc", "loc": "Stoney Creek", "phone": "343-321-0477", "fact": "1 Google review, no website", "niche": "Renovations", "rev": 1}, {"biz": "Agar Construction", "loc": "Cambridge", "phone": "519-623-5275", "fact": "1 Google review, no website", "niche": "Renovations", "rev": 1}, {"biz": "Colson & Colson General Contrs", "loc": "Cambridge", "phone": "519-621-0333", "fact": "1 Google review, no website", "niche": "Renovations", "rev": 1}, {"biz": "Leon James Home Renovations & Repairs", "loc": "Belleville", "phone": "613-967-1915", "fact": "1 Google review, no website", "niche": "Renovations", "rev": 1}, {"biz": "Ideal Colour Contracting Ltd", "loc": "Sault Ste. Marie", "phone": "705-949-3858", "fact": "1 Google review, no website", "niche": "Renovations", "rev": 1}, {"biz": "McMurray Construction", "loc": "Bracebridge", "phone": "705-764-3571", "fact": "1 Google review, no website", "niche": "Renovations", "rev": 1}, {"biz": "Cottage Country Construction", "loc": "Bracebridge", "phone": "705-644-4666", "fact": "1 Google review, no website", "niche": "Renovations", "rev": 1}, {"biz": "Around the House", "loc": "Brockville", "phone": "613-498-8141", "fact": "1 Google review, no website", "niche": "Renovations", "rev": 1}, {"biz": "Morais&Bras, Tile & renovations Inc", "loc": "Toronto", "phone": "647-853-2684", "fact": "1 Google review, no website", "niche": "Renovations", "rev": 1}, {"biz": "Prime Electrical Services Inc.", "loc": "Windsor", "phone": "519-945-9963", "fact": "58 Google reviews, no website", "niche": "Electrician", "rev": 58}, {"biz": "IVR Electrical", "loc": "North York", "phone": "647-686-2310", "fact": "38 Google reviews, no website", "niche": "Electrician", "rev": 38}, {"biz": "Zeus Electric", "loc": "North York", "phone": "647-391-3947", "fact": "27 Google reviews, no website", "niche": "Electrician", "rev": 27}, {"biz": "Aupa Electric", "loc": "Windsor", "phone": "647-550-3287", "fact": "19 Google reviews, no website", "niche": "Electrician", "rev": 19}, {"biz": "Local Electric", "loc": "London", "phone": "519-857-5398", "fact": "18 Google reviews, no website", "niche": "Electrician", "rev": 18}, {"biz": "ARC Electric And Contracting Inc", "loc": "Frankford", "phone": "613-848-2831", "fact": "17 Google reviews, no website", "niche": "Electrician", "rev": 17}, {"biz": "Dennis Eden Electrical Contr", "loc": "Port Colborne", "phone": "905-835-5358", "fact": "14 Google reviews, no website", "niche": "Electrician", "rev": 14}, {"biz": "Positive Solutions Electric Inc.", "loc": "Quinte West", "phone": "613-243-6480", "fact": "10 Google reviews, no website", "niche": "Electrician", "rev": 10}, {"biz": "David Kassay Electric", "loc": "Fort Erie", "phone": "905-894-5371", "fact": "7 Google reviews, no website", "niche": "Electrician", "rev": 7}, {"biz": "Rick Nichols Electrical Svc", "loc": "Beamsville", "phone": "905-329-3170", "fact": "6 Google reviews, no website", "niche": "Electrician", "rev": 6}, {"biz": "Sunshine Electric", "loc": "Windsor", "phone": "519-996-4066", "fact": "6 Google reviews, no website", "niche": "Electrician", "rev": 6}, {"biz": "Renco Electrical Contractors", "loc": "London", "phone": "519-432-6181", "fact": "5 Google reviews, no website", "niche": "Electrician", "rev": 5}, {"biz": "Pegasus Electric Company Ltd", "loc": "York", "phone": "416-766-6966", "fact": "4 Google reviews, no website", "niche": "Electrician", "rev": 4}, {"biz": "Fred Giessler Electrical", "loc": "Niagara-on-the-Lake", "phone": "905-262-5196", "fact": "3 Google reviews, no website", "niche": "Electrician", "rev": 3}, {"biz": "Airo Electric Ltd", "loc": "Stoney Creek", "phone": "905-730-1892", "fact": "3 Google reviews, no website", "niche": "Electrician", "rev": 3}, {"biz": "McCorkindale Plumbing & Electric Enterprises", "loc": "Guelph", "phone": "519-342-6541", "fact": "3 Google reviews, no website", "niche": "Electrician", "rev": 3}, {"biz": "Joe Salvatore", "loc": "Niagara Falls", "phone": "905-374-8963", "fact": "3 Google reviews, no website", "niche": "Electrician", "rev": 3}, {"biz": "Spencer Electric", "loc": "Windsor", "phone": "519-999-6979", "fact": "3 Google reviews, no website", "niche": "Electrician", "rev": 3}, {"biz": "WireWay Electric", "loc": "Bracebridge", "phone": "705-571-3889", "fact": "3 Google reviews, DIY Wix site", "niche": "Electrician", "rev": 3}, {"biz": "CWS Electrical", "loc": "Tillsonburg", "phone": "519-702-4916", "fact": "3 Google reviews, no website", "niche": "Electrician", "rev": 3}, {"biz": "Prostar Electric Ltd", "loc": "Stoney Creek", "phone": "905-961-3855", "fact": "2 Google reviews, no website", "niche": "Electrician", "rev": 2}, {"biz": "Whole House Electrical Services.", "loc": "Toronto", "phone": "416-762-0142", "fact": "2 Google reviews, no website", "niche": "Electrician", "rev": 2}, {"biz": "Carleton Electric", "loc": "Belleville", "phone": "613-969-6665", "fact": "2 Google reviews, no website", "niche": "Electrician", "rev": 2}, {"biz": "Quint Electric Ltd.", "loc": "North York", "phone": "416-315-7305", "fact": "2 Google reviews, no website", "niche": "Electrician", "rev": 2}, {"biz": "Chris Electric", "loc": "Windsor", "phone": "519-981-6416", "fact": "2 Google reviews, no website", "niche": "Electrician", "rev": 2}, {"biz": "Alblas H Electric", "loc": "Ancaster", "phone": "905-648-5707", "fact": "2 Google reviews, no website", "niche": "Electrician", "rev": 2}, {"biz": "Central Electrical Contracting", "loc": "Jerseyville", "phone": "905-648-6501", "fact": "2 Google reviews, no website", "niche": "Electrician", "rev": 2}, {"biz": "John Ryksen Electric Ltd", "loc": "Norwich", "phone": "519-424-9123", "fact": "2 Google reviews, no website", "niche": "Electrician", "rev": 2}, {"biz": "Generac Sault Ste Marie - Mogul Power Solutions", "loc": "Sault Ste. Marie", "phone": "705-257-0557", "fact": "2 Google reviews, no website", "niche": "Electrician", "rev": 2}, {"biz": "Ind-Comm Electric", "loc": "Caledonia", "phone": "905-765-3666", "fact": "1 Google review, no website", "niche": "Electrician", "rev": 1}, {"biz": "Hammond Electric", "loc": "Cambridge", "phone": "519-621-7754", "fact": "1 Google review, no website", "niche": "Electrician", "rev": 1}, {"biz": "All Control Electrical Contrng", "loc": "Stoney Creek", "phone": "905-920-3585", "fact": "1 Google review, no website", "niche": "Electrician", "rev": 1}, {"biz": "Enersmart", "loc": "Dundas", "phone": "905-512-2654", "fact": "1 Google review, no website", "niche": "Electrician", "rev": 1}, {"biz": "Heinz Busse Electric Ltd", "loc": "Waterloo", "phone": "519-574-2031", "fact": "1 Google review, no website", "niche": "Electrician", "rev": 1}, {"biz": "Impulse Electric", "loc": "Guelph", "phone": "519-362-9914", "fact": "1 Google review, no website", "niche": "Electrician", "rev": 1}, {"biz": "Simply Electric", "loc": "Brantford", "phone": "519-758-9200", "fact": "1 Google review, no website", "niche": "Electrician", "rev": 1}, {"biz": "Terry's Electric", "loc": "Brantford", "phone": "519-759-6253", "fact": "1 Google review, no website", "niche": "Electrician", "rev": 1}, {"biz": "EOZ Electrical", "loc": "Brantford", "phone": "519-755-1514", "fact": "1 Google review, no website", "niche": "Electrician", "rev": 1}, {"biz": "TLS Electric", "loc": "Bracebridge", "phone": "705-644-7750", "fact": "1 Google review, no website", "niche": "Electrician", "rev": 1}, {"biz": "Envirotech Electric", "loc": "Windsor", "phone": "519-972-7487", "fact": "1 Google review, no website", "niche": "Electrician", "rev": 1}, {"biz": "Sovereign Electric", "loc": "Sault Ste. Marie", "phone": "705-206-4901", "fact": "1 Google review, no website", "niche": "Electrician", "rev": 1}, {"biz": "Lyle Electric", "loc": "Ancaster", "phone": "905-648-3100", "fact": "1 Google review, no website", "niche": "Electrician", "rev": 1}, {"biz": "Corfield Electric", "loc": "Niagara Falls", "phone": "905-651-3232", "fact": "1 Google review, no website", "niche": "Electrician", "rev": 1}, {"biz": "Earl's Electric", "loc": "Tillsonburg", "phone": "519-842-2807", "fact": "1 Google review, no website", "niche": "Electrician", "rev": 1}, {"biz": "AMP-TECH ELECTRICAL SERVICE", "loc": "Windsor", "phone": "519-999-7000", "fact": "1 Google review, no website", "niche": "Electrician", "rev": 1}, {"biz": "CASI Air & Water", "loc": "London", "phone": "519-646-2274", "fact": "276 Google reviews, no website", "niche": "HVAC", "rev": 276}, {"biz": "High class cooling and heating systems", "loc": "Etobicoke", "phone": "905-399-9803", "fact": "123 Google reviews, no website", "niche": "HVAC", "rev": 123}, {"biz": "Comfort-Tek Heating & Cooling", "loc": "Windsor", "phone": "519-562-8090", "fact": "65 Google reviews, no website", "niche": "HVAC", "rev": 65}];
-const KEY = 'sws_calls_2026-06-23';
-const DAY = KEY.replace('sws_calls_','');
-const FUNC = 'https://qykcisuljovprfftomry.supabase.co/functions/v1/callsheet-mark';
-let done = JSON.parse(localStorage.getItem(KEY) || '{}');
-let filter = 'All';
-const niches = ['All', ...new Set(LEADS.map(l=>l.niche))];
-function id(l){return l.biz+'|'+l.phone}
-function save(){localStorage.setItem(KEY, JSON.stringify(done))}
-function toggle(k){done[k]=!done[k];save();render();sync(k);}
-function sync(k){var l=LEADS.find(function(x){return id(x)===k});if(!l)return;try{fetch(FUNC,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({day:DAY,niche:l.niche,biz:l.biz,phone:l.phone,fact:l.fact,called:!!done[k]})});}catch(e){}}
-function resetAll(){if(confirm('Clear all call progress for today?')){done={};save();render()}}
-function setFilter(f){filter=f;render()}
+const DAY="2026-06-26";
+const LEADS=[
+ {grp:"first",tag:"🍕 DO FIRST",name:"Mulberry's (pizza order)",phone:"9058348407",what:"Lock the order + pickup time — small kitchen, 10 people. Open 4–9pm."},
+ {grp:"hot",tag:"🔴 HOT",name:"Tim — Grind Tech",phone:"2892379624",what:"Deposit's IN. Confirm + ask for 5–10 before/after photos. Draft early next week."},
+ {grp:"hot",tag:"🔴 HOT",name:"Mark — Windows & Doors",phone:"9053273971",what:"Chase the $650 Phase 1 (overdue). Send it over and you deliver the draft right after."},
+ {grp:"hot",tag:"🔴 HOT",name:"Cesar — Royal Landworks",phone:"3658333330",what:"Confirm sign-back + deposit, then start the build."},
+ {grp:"hot",tag:"🔴 HOT",name:"Scott — HomeBase Renovations",phone:"5192172290",what:"Callback was due yesterday. Build rapport, he doesn't fully trust yet. Free review QR."},
+ {grp:"hot",tag:"🔴 HOT",name:"Chris Currie — Mountain Air",phone:"7054413985",what:"Jun 21 demo, very interested, never closed. Close it."},
+ {grp:"money",tag:"💰 COLLECT",name:"Micheal Hardy — NAPA",phone:"9056586032",what:"Monthly subscription collection."},
+ {grp:"money",tag:"💰 CLIENT",name:"Joe — Delta Energy",phone:"2899320732",what:"Already paid. Schedule his build (send wireframes + Anthony feedback)."},
+ {grp:"warm",tag:"🌱 WARM",name:"Simran Pahal — Pahal Construction",phone:"9058673547",what:"Interested, not dead. Quick re-touch."},
+ {grp:"warm",tag:"🌱 WARM",name:"Candace — Fitzgerald Electrical",phone:"5197559008",what:"Used the QR, hasn't built the site yet. Nudge."},
+ {grp:"warm",tag:"🌱 WARM",name:"Rob — Snippe Electric",phone:"9052463679",what:"Voice-agent pitch on the phone (misses a lot of calls)."},
+ {grp:"warm",tag:"🌱 WARM",name:"John F — Spinton Roofing",phone:"9055753686",what:"Voice-agent pitch (every missed call is a roof lost)."},
+ {grp:"warm",tag:"🌱 WARM",name:"Marisa Klemm — Brand Name Shoes",phone:"9056511325",what:"Keep in the mix, quick touch."},
+ {grp:"warm",tag:"🌱 WARM",name:"Ken — Furniture Appliance",phone:"4166023815",what:"No-show before — chase a reschedule."}
+];
+const SECT={first:"Do first",hot:"🔴 Hot — money",money:"💰 Collect / client",warm:"🌱 Warm — if time"};
+const key="calls_"+DAY;
+let state=JSON.parse(localStorage.getItem(key)||"{}");
+function id(l){return l.name+"|"+l.phone}
+function fmt(p){return "("+p.slice(0,3)+") "+p.slice(3,6)+"-"+p.slice(6)}
 function render(){
-  const fc=document.getElementById('filters');
-  fc.innerHTML=niches.map(n=>{
-    const cnt=n==='All'?LEADS.length:LEADS.filter(l=>l.niche===n).length;
-    return `<button class="chip ${filter===n?'on':''}" onclick="setFilter('${n}')">${n} (${cnt})</button>`;
-  }).join('');
-  const shown=LEADS.filter(l=>filter==='All'||l.niche===filter);
-  const total=LEADS.length, dn=Object.values(done).filter(Boolean).length;
-  document.getElementById('counter').textContent=`${dn} of ${total} called · ${total-dn} left`;
-  document.getElementById('fill').style.width=(total?dn/total*100:0)+'%';
-  const list=document.getElementById('list');
-  if(!shown.length){list.innerHTML='<div class="empty">No leads here.</div>';return}
-  list.innerHTML=shown.map(l=>{
-    const k=id(l), isDone=!!done[k], tel=l.phone.replace(/[^0-9]/g,'');
-    return `<div class="card ${isDone?'done':''}">
-      <span class="ntag ${l.niche}">${l.niche}</span>
-      <div class="biz">${l.biz}</div>
-      <div class="loc">📍 ${l.loc||'—'} · ${l.phone}</div>
-      <div class="fact">${l.fact}</div>
-      <div class="actions">
-        <a class="btn call" href="tel:${tel}">Call</a>
-        <button class="btn mark ${isDone?'on':''}" onclick="toggle('${k.replace(/'/g,"\\'")}')">${isDone?'✓ Called':'Mark called'}</button>
-      </div>
-    </div>`;
-  }).join('');
+ const list=document.getElementById("list");list.innerHTML="";
+ let order=["first","hot","money","warm"];
+ order.forEach(g=>{
+   const items=LEADS.filter(l=>l.grp===g);if(!items.length)return;
+   const h=document.createElement("div");h.className="sec";h.textContent=SECT[g];list.appendChild(h);
+   items.forEach(l=>{
+     const done=!!state[id(l)];
+     const c=document.createElement("div");c.className="card "+l.grp+(done?" done":"");
+     c.innerHTML=`<span class="tag">${l.tag}</span>
+       <div class="name">${l.name}</div>
+       <div class="ph">${fmt(l.phone)}</div>
+       <div class="what">${l.what}</div>
+       <div class="row">
+         <a class="call" href="tel:+1${l.phone}">📞 Call</a>
+         <button class="mark">${done?"✓ Done":"Mark done"}</button>
+       </div>`;
+     c.querySelector(".mark").onclick=()=>toggle(l);
+     list.appendChild(c);
+   });
+ });
+ const total=LEADS.length,d=LEADS.filter(l=>state[id(l)]).length;
+ document.getElementById("cnt").textContent=d+" / "+total+" done";
+ document.getElementById("fill").style.width=(total?d/total*100:0)+"%";
 }
+function toggle(l){
+ const k=id(l);state[k]=!state[k];localStorage.setItem(key,JSON.stringify(state));
+ try{fetch("https://qykcisuljovprfftomry.supabase.co/functions/v1/callsheet-mark",{
+   method:"POST",headers:{"Content-Type":"application/json"},
+   body:JSON.stringify({day:DAY,niche:l.grp,biz:l.name,phone:l.phone,fact:l.what,called:!!state[k]})})}catch(e){}
+ render();
+}
+function resetAll(){if(confirm("Reset all marks for today?")){state={};localStorage.setItem(key,"{}");render()}}
 render();
 </script>
 </body>
